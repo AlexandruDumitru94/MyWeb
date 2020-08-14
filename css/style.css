@@ -1,0 +1,82 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.scroll {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+}
+
+.background {
+    background: rgb(211, 211, 211);
+    
+    width: 100%;
+    z-index: 1;
+    height: 100%;
+}
+
+.first-section {
+    width: 500vw;
+    
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+
+
+.second-section {
+    width: 600vw;
+    z-index: 3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.third-section {
+    width: 700vw;
+    z-index: 4;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.fourth-section {
+    width: 800vw;
+    z-index: 5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+
+.divOne {
+    background: rgba(255, 0, 0, 0.2);
+    height: 90%;
+    width: 100vw;
+}
+
+
+.divTwo {
+    background-color: rgba(34, 128, 5, 0.2);
+    height: 80%;
+    width: 100vw;
+}
+
+.divThree {
+    background-color: rgb(35, 151, 197, 0.2);
+    height: 70%;
+    width: 100vw;
+}
+.divFour {
+    background-color: rgb(184, 48, 177, 0.2);
+    height: 60%;
+    width: 100vw;
+}
