@@ -1,82 +1,72 @@
+html {
+    scroll-behavior: smooth;
+    font-family: 'Alata';
+}
+
 *, *::before, *::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+
 .scroll {
     position: fixed;
     bottom: 0;
     left: 0;
-    height: 100%;
 }
+
 
 .background {
-    background: rgb(211, 211, 211);
-    
-    width: 100%;
-    z-index: 1;
+    background: rgba(14, 14, 14, 1);
+    height: 100%;
+    width: 500vw;
+}
+
+
+.section {
+    pointer-events: none;
+    display: flex;
+    justify-content: space-between;
     height: 100%;
 }
 
-.first-section {
-    width: 500vw;
-    
-    z-index: 2;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    
-}
+    .section--first {
+        width: 500vw;
+    } 
+    .section--second {
+        width: 600vw;
+    }
+
+    .section--third {
+        width: 700vw;
+    }
+    .section--fourth {
+        width: 800vw;
+    }
 
 
-
-.second-section {
-    width: 600vw;
-    z-index: 3;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    
-}
-
-.third-section {
-    width: 700vw;
-    z-index: 4;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    
-}
-.fourth-section {
-    width: 800vw;
-    z-index: 5;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    
-}
-
-
-.divOne {
-    background: rgba(255, 0, 0, 0.2);
-    height: 90%;
+.page {
+    background: rgba(255, 0, 0, 0);
+    height: 100vh;
     width: 100vw;
+    pointer-events: none;
+    position: relative;
+    
 }
 
+    .page > * {
+        transform: translate(-50%, -50%);
+    }
 
-.divTwo {
-    background-color: rgba(34, 128, 5, 0.2);
-    height: 80%;
-    width: 100vw;
-}
+    .page--hidden {
+        visibility: hidden;
+    }
 
-.divThree {
-    background-color: rgb(35, 151, 197, 0.2);
-    height: 70%;
-    width: 100vw;
-}
-.divFour {
-    background-color: rgb(184, 48, 177, 0.2);
-    height: 60%;
-    width: 100vw;
+#index-screen-welcome {
+pointer-events: auto;
+position: absolute;
+left: 50%;
+color: rgba(255, 255, 255, 1);
+bottom: 50%;
 }
