@@ -10,3 +10,14 @@ $(function() {
      });
 });
 
+function scrollToPage(pageNumber) {
+    var bodyWidth =document.getElementsByClassName("section--fourth")[0].scrollWidth;
+    var screenWidth = document.getElementsByClassName("page")[0].scrollWidth;
+    var screenHeight = document.getElementsByClassName("page")[0].scrollHeight;
+    var quarterSizeDif = (screenWidth - screenHeight) / 4;
+    var pageScroll = 0;
+    if  (pageNumber > 0) {
+        pageScroll += (quarterSizeDif + (bodyWidth - screenWidth) / 4) * pageNumber;
+    }
+    window.scrollTo(0, pageScroll);
+}

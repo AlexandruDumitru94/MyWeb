@@ -12,13 +12,13 @@
     
 
     <section class="scroll section section--first">
-        <div class="page">
-            <a href="index.html" id="index-screen-welcome">Welcome to my Web Site!</a>
+        <div class="page" id="home-screen">
+            <a href="index.html" id="home-screen-welcome">Welcome to my Web</a>
         </div>
-        <div class="page page--hidden"></div>
-        <div class="page"></div>
-        <div class="page"></div>
-        <div class="page"></div>
+        <div class="page page--hidden" id="photos-screen"></div>
+        <div class="page" id="planets-screen"></div>
+        <div class="page" id="wip-screen"></div>
+        <div class="page" id="about-screen"></div>
     </section>
 
 
@@ -44,9 +44,19 @@
         <div class="page"></div>
         <div class="page"></div>
         <div class="page"></div>
-        <div class="page"></div>
+        <div class="page"><p id="test">this</p></div>
         <div class="page"></div>
     </section>
+
+    
+    <footer class="main-footer">
+        <button class="nav" onclick="scrollToPage(0)">Home</button>
+        <button class="nav" onclick="scrollToPage(1)">Photos</button>
+        <button class="nav" onclick="scrollToPage(2)">Planets</button>
+        <button class="nav" onclick="scrollToPage(3)">Project</button>
+        <button class="nav" onclick="scrollToPage(4)">About</button>
+        
+    </footer>
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
     integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="

@@ -1,14 +1,22 @@
 html {
     scroll-behavior: smooth;
     font-family: 'Alata';
+    
 }
-
 *, *::before, *::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+body {
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
 
 .scroll {
     position: fixed;
@@ -47,12 +55,10 @@ html {
 
 
 .page {
-    background: rgba(255, 0, 0, 0);
     height: 100vh;
     width: 100vw;
     pointer-events: none;
     position: relative;
-    
 }
 
     .page > * {
@@ -63,10 +69,36 @@ html {
         visibility: hidden;
     }
 
-#index-screen-welcome {
+
+
+#home-screen-welcome {
 pointer-events: auto;
 position: absolute;
 left: 50%;
 color: rgba(255, 255, 255, 1);
 bottom: 50%;
+}
+
+
+
+#test {
+pointer-events: auto;
+position: absolute;
+left: 50%;
+color: rgba(255, 255, 255, 1);
+bottom: 50%;
+}
+
+.main-footer {
+position: fixed;
+height: 10vh;
+width: 100%;
+bottom: 0;
+display: flex;
+justify-content: center;
+}
+
+.main-footer__nav{
+
+color: black;
 }
