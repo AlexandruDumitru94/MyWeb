@@ -1,3 +1,4 @@
+var galleryContainer, modal;
 
 
 $(function() {
@@ -29,7 +30,7 @@ function scrollToPage(pageNumber) {
     console.log(screenHeight);
 }
 
-function gallerySize() {
+function ready() {
             var camera = document.getElementById("camera");
 
             var cameraWidth = camera.clientWidth;
@@ -37,9 +38,53 @@ function gallerySize() {
 
             var y = cameraWidth + "px";
             var x = cameraHeight + "px";
-        
-            var container = document.getElementsByClassName("camera-container")[0];
 
-            container.style.height = x;
-            container.style.width = y;
+            var cameraContainer = document.getElementsByClassName("camera-container")[0];
+            
+            modal = document.getElementById("modal");
+
+            cameraContainer.style.height = x;
+            cameraContainer.style.width = y;
+            
+            modal.style.height = x;
+            modal.style.width = y;
+            
+            galleryContainer = document.getElementsByClassName("swiper-container")[0];
+
+            var gallerySwiper = new Swiper(galleryContainer, {
+                touchReleaseOnEdges: true
+            });
+    }
+
+window.onload = ready();
+
+    
+function displayModal() {
+    var modalPage = document.getElementsByClassName("photos-screen-modal")[0];
+    var modalContainer = document.getElementsByClassName("swiper-container")[1];
+    var span = document.getElementsByClassName("close")[0];
+    var upperCameraText = document.getElementById("photo-text");
+
+    span.onclick = function() {
+        modalPage.style.display = "none";
+        galleryContainer.style.opacity = "1";
+        upperCameraText.style.color =  "rgba(255, 255, 255, 1)";
+        upperCameraText.style.zIndex = "1";
+        galleryContainer.style.pointerEvents = "auto";
+    }
+
+    galleryContainer.addEventListener('click', addModalSwiper);
+            
+        function addModalSwiper() {
+            modalPage.style.display = "flex";
+            galleryContainer.style.opacity = "0.3";
+            upperCameraText.style.color =  "rgba(255, 255, 255, 0.3)";
+            upperCameraText.style.zIndex = "-1";
+            galleryContainer.style.pointerEvents = "none";
+            var modalSwiper = new Swiper(modalContainer, { 
+                touchReleaseOnEdges: true
+            });
         }
+}
+
+window.onload = displayModal();

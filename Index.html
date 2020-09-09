@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alata">
+    <link rel="stylesheet" href="node_modules/swiper/swiper-bundle.min.css">
     <title>Alexandru Dumitru Portfolio</title>
 </head>
-<body onload="gallerySize()" onresize="gallerySize()">
-    
+<body onresize="ready()">
+
     <section class="scroll background" ></section>
     
 
@@ -20,13 +21,13 @@
             </main>
         </div>
 
-        <div class="page page--hidden" id="photos-screen"></div>
+        <div class="page"></div>
 
-        <div class="page" id="planets-screen"></div>
+        <div class="page"></div>
 
-        <div class="page" id="wip-screen"></div>
+        <div class="page"></div>
 
-        <div class="page" id="about-screen"></div>
+        <div class="page"></div>
 
     </section>
 
@@ -46,15 +47,31 @@
                     width="3145" height="4318">
 
                 <div class="camera-container">
-                    <div class="gallery">
-                        <img src="images/testphoto2.jpg" id="gallery-photo">
-                    </div>
+                    <div class="swiper-container" id="camera-swiper">
+                        <div class="swiper-wrapper" id="camera-wrapper">
+                            <img src="images/testphoto2.jpg" class="swiper-slide camera-photo" id="gallery-one">
+                            <img src="images/building.jpg" class="swiper-slide camera-photo" id="gallery-two">
+                        </div>
+                    </div>  
                 </div>
 
             </div>
+
+            <div class="page__section photos-screen-modal">
+                <div id="modal" class="swiper-container">
+                    <span class="close">&times;</span>
+                    <div class="modal-content swiper-wrapper">
+                        <img src="images/testphoto2.jpg" class="swiper-slide modal-photo" id="modal-one">
+                        <img src="images/building.jpg" class="swiper-slide modal-photo" id="modal-two">
+                    </div>
+                </div>
+            </div>
+
         </div>
 
-        <div class="page"></div>
+        <div class="page">
+
+        </div>
 
         <div class="page"></div>
 
@@ -109,14 +126,16 @@
         <button class="nav" onclick="scrollToPage(0)">Home</button>
         <button class="nav" onclick="scrollToPage(1)">Photos</button>
         <button class="nav" onclick="scrollToPage(2)">Planets</button>
-        <button class="nav" onclick="scrollToPage(3)">Project</button>
+        <button class="nav" onclick="scrollToPage(3)">Projects</button>
         <button class="nav" onclick="scrollToPage(4)">About</button>
     </footer>
+        
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
     integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
     crossorigin="anonymous"></script>
     <script src="jInvertScroll/dist/js/jquery.jInvertScroll.min.js"></script>
+    <script src="node_modules/swiper/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
