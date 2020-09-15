@@ -405,3 +405,7 @@ bottom: 50%;
         top: 80%;
     }
 }
+
+label, input, textarea {
+    display:block;
+}
