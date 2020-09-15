@@ -413,3 +413,7 @@ label, input, textarea {
 input, textarea {
     pointer-events: all;
 }
+
+.submit {
+    pointer-events: all;
+}
