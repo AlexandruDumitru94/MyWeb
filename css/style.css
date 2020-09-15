@@ -407,5 +407,9 @@ bottom: 50%;
 }
 
 label, input, textarea {
-    display:block;
+    display: block;
+}
+
+input, textarea {
+    pointer-events: all;
 }
