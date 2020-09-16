@@ -410,6 +410,9 @@ bottom: 50%;
     body {
         overflow-y: hidden;
     }
+    html{
+        overflow: hidden;
+    }
 }
 
 
