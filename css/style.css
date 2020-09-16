@@ -1,7 +1,7 @@
 html {
     scroll-behavior: smooth;
     font-family: 'Alata';
-    
+    calc(var(--vh, 1vh) * 100);
 }
 
 *, *::before, *::after {
