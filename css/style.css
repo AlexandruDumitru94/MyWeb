@@ -413,7 +413,7 @@ bottom: 50%;
     html{
         overflow: hidden;
     }*/
-    html, body {margin: 0; height: 100%; overflow: hidden}
+    html, body {margin: 0; height: calc(var(--vh, 1vh) * 100); overflow: hidden}
 }
 
 
