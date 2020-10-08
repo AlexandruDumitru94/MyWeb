@@ -407,15 +407,13 @@ bottom: 50%;
 }
 
 @media only screen and (max-width: 1200px) {
-    body {
+    /*body {
         overflow-y: hidden;
     }
     html{
         overflow: hidden;
-    }
-    window{
-        overflow: hidden;
-    }
+    }*/
+    html, body {margin: 0; height: 100%; overflow: hidden}
 }
 
 
