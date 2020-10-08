@@ -413,6 +413,9 @@ bottom: 50%;
     html{
         overflow: hidden;
     }
+    window{
+        overflow: hidden;
+    }
 }
 
 
