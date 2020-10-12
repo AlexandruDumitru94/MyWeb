@@ -5,72 +5,134 @@
     <meta name="viewport" content="width=device-width,height=device-height initial-scale=1.0, maximum-scale=1">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alata">
+    <link href='https://fonts.googleapis.com/css?family=Bilbo Swash Caps' rel='stylesheet'>
     <link rel="stylesheet" href="node_modules/swiper/swiper-bundle.min.css">
     <title>Alexandru Dumitru Portfolio</title>
 </head>
-<body onresize="ready()">
+<body onresize="galleryDimensions()" onscroll="stopScroll()">
 
     <section class="scroll background" ></section>
-    
 
     <section class="scroll section section--first">
-
         <div class="page">
             <main class="page__section home-screen-bot" >
                 <p class="center-transform" id="welcome">Welcome to my Web</p>
             </main>
         </div>
 
-        <div class="page"></div>
-
-        <div class="page"></div>
-
-        <div class="page"></div>
-
-        <div class="page"></div>
-
-    </section>
-
-
-    <section class="scroll section section--second">
-
         <div class="page">
-            <figure class="page__section home-screen-main">
-                <img id="head-shot" src="images/suit.jpg" alt="Photo of Alex">
-            </figure>
-        </div>
-
-        <div class="page">
-            <div class="page__section photos-screen-main">
-
-                <img id="camera" src="images/camera2.png" alt="Photo Camera" 
+            <div class="page__section photos-projects-main">
+                <img class="camera-wip" src="images/camera2.png" alt="Photo Camera" 
                     width="3145" height="4318">
 
                 <div class="camera-container">
                     <div class="swiper-container" id="camera-swiper">
                         <div class="swiper-wrapper" id="camera-wrapper">
-                            <img src="images/testphoto2.jpg" class="swiper-slide camera-photo" id="gallery-one">
-                            <img src="images/building.jpg" class="swiper-slide camera-photo" id="gallery-two">
+                            <img src="images/mtnhouse.jpg" class="swiper-slide camera-photo">
+                            <img src="images/statue.jpg" class="swiper-slide camera-photo">
+                            <img src="images/lake.jpg" class="swiper-slide camera-photo">
+                            <img src="images/cloud.jpg" class="swiper-slide camera-photo">
+                            <img src="images/car.jpg" class="swiper-slide camera-photo">
+                            <img src="images/building.jpg" class="swiper-slide camera-photo">
+                            <img src="images/bottomview.jpg" class="swiper-slide camera-photo">
+                            <img src="images/sunglasses.jpg" class="swiper-slide camera-photo">
+                            <img src="images/trees.jpg" class="swiper-slide camera-photo">
+                            <img src="images/sunset.jpg" class="swiper-slide camera-photo">
                         </div>
-                    </div>  
+                    </div>
                 </div>
 
             </div>
 
             <div class="page__section photos-screen-modal">
                 <div id="modal" class="swiper-container">
-                    <span class="close">&times;</span>
+                    <span class="modal-close">&times;</span>
+
                     <div class="modal-content swiper-wrapper">
-                        <img src="images/testphoto2.jpg" class="swiper-slide modal-photo" id="modal-one">
-                        <img src="images/building.jpg" class="swiper-slide modal-photo" id="modal-two">
+                        <img src="images/mtnhouse.jpg" class="swiper-slide modal-photo">
+                        <img src="images/statue.jpg" class="swiper-slide modal-photo">
+                        <img src="images/lake.jpg" class="swiper-slide camera-photo">
+                        <img src="images/cloud.jpg" class="swiper-slide camera-photo">
+                        <img src="images/car.jpg" class="swiper-slide camera-photo">
+                        <img src="images/building.jpg" class="swiper-slide camera-photo">
+                        <img src="images/bottomview.jpg" class="swiper-slide camera-photo">
+                        <img src="images/sunglasses.jpg" class="swiper-slide camera-photo">
+                        <img src="images/trees.jpg" class="swiper-slide camera-photo">
+                        <img src="images/sunset.jpg" class="swiper-slide camera-photo">
                     </div>
                 </div>
             </div>
-
         </div>
 
         <div class="page">
+            <figure class="planet-container container-jupiter">
+                <figcaption class="planet-info info-jupiter" data-planet-array="2">
+                    <h3 class="planet-title">Jupiter</h3>
+                    
+                    <span class="planet-info-close">&times;</span>
 
+                    <ul class="planet-list">
+                        <li data-planet="semimajorAxis">km</li>
+                        <li data-planet="meanRadius">km</li>
+                        <li data-planet="density">g/cm<sup>3</sup></li>
+                        <li data-planet="gravity">N</li>
+                    </ul>
+                </figcaption>
+
+                <img class="planet jupiter" src="images/planets/jupiter.png"  width="518px" height="517px" />
+            </figure>
+            
+            <figure class="planet-container container-saturn">
+                <figcaption class="planet-info info-saturn" data-planet-array="5">
+                    <h3 class="planet-title">Saturn </h3>
+                    
+                    <span class="planet-info-close">&times;</span>
+
+                    <ul class="planet-list">
+                        <li data-planet="semimajorAxis">km</li>
+                        <li data-planet="meanRadius">km</li>
+                        <li data-planet="density">g/cm<sup>3</sup></li>
+                        <li data-planet="gravity">N</li>
+                    </ul>
+                </figcaption>
+
+                <img class="planet saturn" src="images/planets/saturn.png"  width="508px" height="377px" />
+            </figure>
+
+            <figure class="planet-container container-uranus">
+                <img class="planet uranus" src="images/planets/uranus.png"  width="646px" height="634px" />
+                
+                <figcaption class="planet-info info-uranus" data-planet-array="0">
+                    <h3 class="planet-title">Uranus</h3>
+                    
+                    <span class="planet-info-close">&times;</span>
+
+                    <ul class="planet-list">
+                        <li data-planet="semimajorAxis">km</li>
+                        <li data-planet="meanRadius">km</li>
+                        <li data-planet="density">g/cm<sup>3</sup></li>
+                        <li data-planet="gravity">N</li>
+                    </ul>
+                </figcaption>
+                
+            </figure>
+
+            <figure class="planet-container container-neptune">
+                <img class="planet neptune" src="images/planets/neptune.png"  width="588px" height="583px" />
+
+                <figcaption class="planet-info info-neptune" data-planet-array="1">
+                    <h3 class="planet-title">Titleadsbhdashdjhsak <span class="planet-close">&times;</span></h3>
+                    
+                    <span class="planet-info-close">&times;</span>
+
+                    <ul class="planet-list">
+                        <li data-planet="semimajorAxis">km</li>
+                        <li data-planet="meanRadius">km</li>
+                        <li data-planet="density">g/cm<sup>3</sup></li>
+                        <li data-planet="gravity">N</li>
+                    </ul>
+                </figcaption>
+            </figure>
         </div>
 
         <div class="page"></div>
@@ -78,66 +140,193 @@
         <div class="page"></div>
     </section>
 
+    <section class="scroll section section--second">
+        <div class="page">
+            <figure class="page__section home-screen-main">
+                <img id="head-shot" src="images/head-shot.jpg" alt="Photo of Alex">
+            </figure>
+        </div>
+
+        <div class="page"></div>
+
+        <div class="page">
+            <img class="sun" src="images/planets/sun.png"  width="1569px" height="1506px" />  
+        </div>
+
+        <div class="page">
+            <header class="page__section photos-projects-top">
+                <h1 class="center-transform photos-projects-title" >Projects</h1>
+            </header>
+        </div>
+
+        <div class="page">
+            <form id="contact" action="https://formspree.io/alexandru.dumitru94.portfolio@gmail.com" method="POST">
+                <h3 class="form-header">
+                    You can use this form to contact me regarding full-time and freelance working opportunities.
+                    <br>
+                    I also highly appreciate feedback.
+                </h3>
+                
+                <ul class="form-list">
+                    <li class="half-input">
+                        <input type="text" name="name" class="name" placeholder="Name" autocomplete="off"/>
+                    </li>
+        
+                    <li class="half-input">
+                        <input type="email" name="email" class="name" placeholder="E-mail" autocomplete="off"/>
+                    </li>
+        
+                    <li class="full-input">
+                        <input type="text" name="subject" class="subject" placeholder="Subject" autocomplete="off"/>
+                    </li>
+                        
+                    <li class="full-input">
+                        <textarea class="message" name="message" placeholder="Message" rows="4" autocomplete="off"></textarea>
+                    </li>
+                </ul>
+        
+                <button type="submit" class="submit">Send</button>
+            </form>
+
+            <div id="icons-container">
+                <a href="https://github.com/AlexandruDumitru94" target="_blank" title="GitHub">
+                    <i class="contact-icons fab fa-github-square"></i>
+                </a>
+
+                <a href="https://www.linkedin.com/in/alexandrudumitru94/" target="_blank" title="LinkedIn">
+                    <i class="contact-icons fab fa-linkedin"></i>
+                </a>
+
+                <a href="images/Alexandru_Dumitru_CV.pdf" target="_blank" title="Resume">
+                    <i class="contact-icons far fa-address-card"></i>
+                </a>
+            </div>
+        </div>
+    </section>
 
     <section class="scroll section section--third">
         <div class="page">
             <header class="page__section home-screen-top">
                 <h1 class="center-transform" id="greeting">
-                    <span class="greeting__text">Hello!1</span><br>
-                    <span class="greeting__text">I'm Alex</span><br>
-                    <span class="greeting__text">front-end developer.</span>
+                    <span class="greeting__text" id="gt-one">Hello!</span><br>
+                    <span class="greeting__text" id="gt-two">I'm <span id="first-name">A</span>lex.</span><br>
+                    <span class="greeting__text" id="gt-three">Front-end developer.</span>
                 </h1>
             </header>
         </div> 
 
         <div class="page">
-            <header class="page__section photos-screen-top">
-                <h1 class="center-transform" id="photo-text">
-                    Check out these photos.
+            <header class="page__section photos-projects-top">
+                <h1 class="center-transform photos-projects-title" id="photos-text">
+                    Here are some photos.
                 </h1>
             </header>
         </div>
 
-        <div class="page"></div>
-
-        <div class="page"></div>
-
         <div class="page">
-            <form action="https://formspree.io/alexandru.dumitru94.portfolio@gmail.com" method="POST">
-                <label>
-                    E-mail
-                    <input type="email" name="email" class="email"/>
-                </label>
-                <label>
-                    Subject
-                    <input type="text" name="subject" class="subject"/>
-                </label>
-                <label>
-                    Message
-                    <textarea class="message" name="message"></textarea>
-                </label>
-                <div class="status">
-        
-                </div>
-                <button type="submit" class="submit">Send</button>
-            </form>
+            <figure class="planet-container container-mercury">
+                <figcaption class="planet-info info-mercury" data-planet-array="4">
+                    <h3 class="planet-title">Mercury <span class="planet-close">&times;</span></h3>
+                    
+                    <span class="planet-info-close">&times;</span>
+
+                    <ul class="planet-list">
+                        <li data-planet="semimajorAxis">km</li>
+                        <li data-planet="meanRadius">km</li>
+                        <li data-planet="density">g/cm<sup>3</sup></li>
+                        <li data-planet="gravity">N</li>
+                    </ul>
+                </figcaption>
+
+                <img class="planet mercury" src="images/planets/mercury.png"  width="1745px" height="1745px" />
+            </figure>
+
+            <figure class="planet-container container-venus">
+                <figcaption class="planet-info info-venus" data-planet-array="7">
+                    <h3 class="planet-title">Venus </h3>
+
+                    <span class="planet-info-close">&times;</span>
+                    
+                    <ul class="planet-list">
+                        <li data-planet="semimajorAxis">km</li>
+                        <li data-planet="meanRadius">km</li>
+                        <li data-planet="density">g/cm<sup>3</sup></li>
+                        <li data-planet="gravity">N</li>
+                    </ul>
+                </figcaption>
+
+                <img class="planet venus" src="images/planets/venus.png"  width="429px" height="438px" />
+            </figure>
         </div>
 
+        <div class="page">
+            <figure class="page__section photos-projects-main">
+                <img class="camera-wip" src="images/wip.jpg" alt="Work in Progress"
+                width="4134" height="2749">
+            </figure>
+        </div>
+
+        <div class="page">
+            <h1 id="final-words">
+                I enjoy turning ideas into reality. Tell me yours.
+            </h1>
+        </div>
     </section>
     
-
     <section class="scroll section section--fourth">
-
         <div class="page" id="home-screen-front"></div>
 
-        <div class="page"></div>
+        <div class="page">
+            <img class="outer-sparkle" id="sparkle-one" src="images/sparkle.png" />
+            <img class="outer-sparkle" id="sparkle-two" src="images/sparkle.png" />
+            <img class="outer-sparkle" id="sparkle-three" src="images/sparkle.png" />
+            <img class="outer-sparkle" id="sparkle-four" src="images/sparkle.png" />
+            <img class="inner-sparkle" id="sparkle-five" src="images/sparkle.png" />
+            <img class="inner-sparkle" id="sparkle-six" src="images/sparkle.png" />
+        </div>
+
+        <div class="page">
+            <figure class="planet-container container-earth">
+                <figcaption class="planet-info info-earth" data-planet-array="6">
+                    <h3 class="planet-title">Venus </h3> 
+
+                    <span class="planet-info-close">&times;</span>
+                    
+                    <ul class="planet-list">
+                        <li data-planet="semimajorAxis">km</li>
+                        <li data-planet="meanRadius">km</li>
+                        <li data-planet="density">g/cm<sup>3</sup></li>
+                        <li data-planet="gravity">N</li>
+                    </ul>
+                </figcaption>
+
+                <img class="planet earth" src="images/planets/earth.png"  width="620px" height="614px" />
+                
+            </figure>
+
+            <img class="planet moon" src="images/planets/moon.png"  width="1753px" height="1749px" />
+
+            <figure class="planet-container container-mars">
+                <figcaption class="planet-info info-mars" data-planet-array="3">
+                    <h3 class="planet-title">Venus </h3>
+
+                    <span class="planet-info-close">&times;</span> 
+                    
+                    <ul class="planet-list">
+                        <li data-planet="semimajorAxis">km</li>
+                        <li data-planet="meanRadius">km</li>
+                        <li data-planet="density">g/cm<sup>3</sup></li>
+                        <li data-planet="gravity">N</li>
+                    </ul>
+                </figcaption>
+
+                <img class="planet mars" src="images/planets/mars.png"  width="600px" height="615px" />
+            </figure>
+        </div>
 
         <div class="page"></div>
 
-        <div class="page"><p id="test">this</p></div>
-
         <div class="page"></div>
-
     </section>
 
     
@@ -146,10 +335,31 @@
         <button class="nav" onclick="scrollToPage(1)">Photos</button>
         <button class="nav" onclick="scrollToPage(2)">Planets</button>
         <button class="nav" onclick="scrollToPage(3)">Projects</button>
-        <button class="nav" onclick="scrollToPage(4)">About</button>
+        <button class="nav" onclick="scrollToPage(4)">Contact</button>
     </footer>
+
+    <div class="info-container">
+        <div class="info" >
+            <h4 class="info-title">You can:</h4>
+
+            <span class="planet-info-close">&times;</span> 
+
+            <ul class="info-list">
+                <li class="info-item">Use the bottom Navigation to see the rest</li>
+                <li class="info-item">Swipe through the pictures or click them to open the Gallery @ "Photos"</li>
+                <li class="info-item">Click on the planets to see some of their information @ "Planets"</li>
+            </ul>
+        </div>
+
+        <span class="button-info fa-stack fa-sm">
+            <i class="fas fa-circle-notch fa-stack-2x"></i>
+            <i class="fas fa-info fa-stack-1x"></i>
+        </span>
+    </div>
         
 
+    <script src="https://kit.fontawesome.com/b08b446b66.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
     integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
     crossorigin="anonymous"></script>
