@@ -42,7 +42,7 @@ welcomeText = document.getElementById("welcome");
 welcomeTextLeft = window.getComputedStyle(welcomeText).getPropertyValue("left");
 
 let vh = window.innerHeight * 0.01;
-document.documentElement.style.setProperty('--vh', `${vh}px`);
+window.onload = document.documentElement.style.setProperty('--vh', `${vh}px`);
 
 window.addEventListener('resize', () => {
     let vh = window.innerHeight * 0.01;
