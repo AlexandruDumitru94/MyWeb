@@ -62,7 +62,7 @@ $(function() {
 function scrollToPage(pageNumber) {
     var pageScroll = 0;
     if  (pageNumber > 0) {
-        pageScroll += (quarterSizeDif + (bodyWidth - screenWidth) / 4) * pageNumber;
+        pageScroll += quarterSizeDif  * pageNumber;
     }
     window.scrollTo(0, pageScroll);
 }
