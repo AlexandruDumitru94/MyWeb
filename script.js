@@ -66,7 +66,7 @@ function scrollToPage(pageNumber) {
     quarterSizeDif = (screenWidth - screenHeight) / 4;
     var pageScroll = 0;
     if  (pageNumber > 0) {
-        pageScroll += (bodyWidth - screenWidth) / 4 * pageNumber;
+        pageScroll += (quarterSizeDif + (bodyWidth - screenWidth) / 4) * pageNumber;
     }
     window.scrollTo(0, pageScroll);
 }
