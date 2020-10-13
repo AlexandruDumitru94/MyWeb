@@ -60,6 +60,10 @@ $(function() {
 });
 
 function scrollToPage(pageNumber) {
+    bodyWidth = document.getElementsByClassName("section--fourth")[0].scrollWidth;
+    screenWidth = document.getElementsByClassName("page")[0].scrollWidth;
+    screenHeight = document.getElementsByClassName("page")[0].scrollHeight;
+    quarterSizeDif = (screenWidth - screenHeight) / 4;
     var pageScroll = 0;
     if  (pageNumber > 0) {
         pageScroll += (bodyWidth - screenWidth) / 4 * pageNumber;
