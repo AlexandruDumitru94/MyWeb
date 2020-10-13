@@ -41,83 +41,6 @@ headShotHeight = window.getComputedStyle(headShot).getPropertyValue("height");
 welcomeText = document.getElementById("welcome");
 welcomeTextLeft = window.getComputedStyle(welcomeText).getPropertyValue("left");
 
-let vh = window.innerHeight * 0.01;
-window.onload = document.documentElement.style.setProperty('--vh', `${vh}px`);
-
-window.addEventListener('resize', () => {
-    let vh = window.innerHeight * 0.01;
-    document.documentElement.style.setProperty('--vh', `${vh}px`);
-});
-
-$(function() {
-    $.jInvertScroll([ '.scroll' ], 
-    {
-         // height: 6000,                   // optional: define the height the user can scroll, otherwise the overall length will be taken as scrollable height
-         onScroll: function(percent) {   //optional: callback function that will be called when the user scrolls down, useful for animating other things on the page
-             console.log(percent);
-         }
-     });
-});
-
-function scrollToPage(pageNumber) {
-    bodyWidth = document.getElementsByClassName("section--fourth")[0].scrollWidth;
-    screenWidth = document.getElementsByClassName("page")[0].scrollWidth;
-    screenHeight = document.getElementsByClassName("page")[0].scrollHeight;
-    quarterSizeDif = (screenWidth - screenHeight) / 4;
-    var pageScroll = 0;
-    if  (pageNumber > 0) {
-        pageScroll += (quarterSizeDif + (bodyWidth - screenWidth) / 4) * pageNumber;
-    }
-    window.scrollTo(0, pageScroll);
-}
-
- function stopScroll()  {
-        if(pageYOffset > (maxScroll - 1) && !deleteStopScroll) {
-            contact.style.overflow = "hidden";
-            htmlElement.style.overflow = "hidden";
-            for(let i = 0; i < navButtons.length; i++) {
-                let button = navButtons[i];
-                button.style.pointerEvents = "none";
-            }
-
-            endTimeline = gsap.timeline({onComplete: timelineEnd});
-
-            endTimeline.set("#final-words", {bottom: "50%", yPercent: 50,  opacity: 0, display: "none"});
-            endTimeline.to("#final-words", {opacity: 1, display: "block", duration: 2});
-            endTimeline.fromTo("#final-words", {bottom: "50%", yPercent: 50, display: "block",  opacity: 1}, {bottom: finalHeight, yPercent: 0, duration: 1});
-            endTimeline.fromTo("#contact", {display: "none", height: 0, padding: 0, opacity: 0}, {display: "block", height: contactHeight, padding: 10, opacity: 1, duration: 1}, 2);
-            endTimeline.fromTo("#icons-container", {display: "none", height: 0, opacity: 0}, {display: "flex", height: "auto", opacity: 1, duration: 1}, 2);
-            endTimeline.fromTo(".contact-icons", {display: "none", fontSize: 0, opacity: 0}, {display: "inline-block", fontSize: "2em", opacity: 1, duration: 1}, 2);
-             
-            function timelineEnd() {
-                contact.style.overflow = "auto";
-                htmlElement.style.overflow = htmlOverflow;
-                for(let i = 0; i < navButtons.length; i++) {
-                    let button = navButtons[i];
-                    button.style.pointerEvents = "all";
-                }
-                deleteStopScroll = true;
-            }
-        } 
- };
-
- function galleryDimensions() {
-        cameraWidth = camera.clientWidth;
-        cameraHeight = camera.clientHeight;
-        cameraHeightPx = cameraHeight + "px";
-        cameraWidthPx = cameraWidth + "px";
-
-        cameraContainer.style.height = cameraHeightPx;
-        cameraContainer.style.width = cameraWidthPx;
-        
-        modal.style.height = cameraHeightPx;
-        modal.style.width = cameraWidthPx;
-        
-        gallerySwiper = new Swiper(galleryContainer, {
-            touchReleaseOnEdges: true
-        });
-    }
-
 if(window.readyState == 'loading') {
     window.addEventListener('DOMContentLoaded', ready)
 } else {
@@ -236,3 +159,81 @@ function ready() {
 
     })();
 }
+
+let vh = window.innerHeight * 0.01;
+window.onload = document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+window.addEventListener('resize', () => {
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+});
+
+$(function() {
+    $.jInvertScroll([ '.scroll' ], 
+    {
+         // height: 6000,                   // optional: define the height the user can scroll, otherwise the overall length will be taken as scrollable height
+         onScroll: function(percent) {   //optional: callback function that will be called when the user scrolls down, useful for animating other things on the page
+             console.log(percent);
+         }
+     });
+});
+
+function scrollToPage(pageNumber) {
+    bodyWidth = document.getElementsByClassName("section--fourth")[0].scrollWidth;
+    screenWidth = document.getElementsByClassName("page")[0].scrollWidth;
+    screenHeight = document.getElementsByClassName("page")[0].scrollHeight;
+    quarterSizeDif = (screenWidth - screenHeight) / 4;
+    var pageScroll = 0;
+    if  (pageNumber > 0) {
+        pageScroll += (quarterSizeDif + (bodyWidth - screenWidth) / 4) * pageNumber;
+    }
+    window.scrollTo(0, pageScroll);
+}
+
+ function stopScroll()  {
+        if(pageYOffset > (maxScroll - 1) && !deleteStopScroll) {
+            contact.style.overflow = "hidden";
+            htmlElement.style.overflow = "hidden";
+            for(let i = 0; i < navButtons.length; i++) {
+                let button = navButtons[i];
+                button.style.pointerEvents = "none";
+            }
+
+            endTimeline = gsap.timeline({onComplete: timelineEnd});
+
+            endTimeline.set("#final-words", {bottom: "50%", yPercent: 50,  opacity: 0, display: "none"});
+            endTimeline.to("#final-words", {opacity: 1, display: "block", duration: 2});
+            endTimeline.fromTo("#final-words", {bottom: "50%", yPercent: 50, display: "block",  opacity: 1}, {bottom: finalHeight, yPercent: 0, duration: 1});
+            endTimeline.fromTo("#contact", {display: "none", height: 0, padding: 0, opacity: 0}, {display: "block", height: contactHeight, padding: 10, opacity: 1, duration: 1}, 2);
+            endTimeline.fromTo("#icons-container", {display: "none", height: 0, opacity: 0}, {display: "flex", height: "auto", opacity: 1, duration: 1}, 2);
+            endTimeline.fromTo(".contact-icons", {display: "none", fontSize: 0, opacity: 0}, {display: "inline-block", fontSize: "2em", opacity: 1, duration: 1}, 2);
+             
+            function timelineEnd() {
+                contact.style.overflow = "auto";
+                htmlElement.style.overflow = htmlOverflow;
+                for(let i = 0; i < navButtons.length; i++) {
+                    let button = navButtons[i];
+                    button.style.pointerEvents = "all";
+                }
+                deleteStopScroll = true;
+            }
+        } 
+ };
+
+ function galleryDimensions() {
+        cameraWidth = camera.clientWidth;
+        cameraHeight = camera.clientHeight;
+        cameraHeightPx = cameraHeight + "px";
+        cameraWidthPx = cameraWidth + "px";
+
+        cameraContainer.style.height = cameraHeightPx;
+        cameraContainer.style.width = cameraWidthPx;
+        
+        modal.style.height = cameraHeightPx;
+        modal.style.width = cameraWidthPx;
+        
+        gallerySwiper = new Swiper(galleryContainer, {
+            touchReleaseOnEdges: true
+        });
+    }
+
