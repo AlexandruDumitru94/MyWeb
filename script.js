@@ -48,6 +48,12 @@ if(window.readyState == 'loading') {
 }
  
 function ready() {
+
+    startTimeline = gsap.timeline({defaults: {duration: 1}});
+
+        startTimeline.fromTo(".greeting__text", {opacity: 0, top: "-=100", visibility: "hidden"}, {opacity: 1, top: 0, visibility: "visible", stagger: 1});
+        startTimeline.fromTo("#head-shot", {width: 0, height: 0, visibility: "hidden"}, {width: headShotWidth, height: headShotHeight, visibility: "visible"}, 3.5);
+        startTimeline.fromTo("#welcome", {opacity: 0, left: "-50%", visibility: "hidden"}, {opacity: 1, left: welcomeTextLeft, visibility: "visible"}, "-=1");
     
     galleryDimensions();
 
@@ -151,11 +157,7 @@ function ready() {
             evt.target.parentElement.previousElementSibling.style.visibility = "visible";
         });
 
-        startTimeline = gsap.timeline({defaults: {duration: 1}});
-
-        startTimeline.fromTo(".greeting__text", {opacity: 0, top: "-=100", visibility: "hidden"}, {opacity: 1, top: 0, visibility: "visible", stagger: 1});
-        startTimeline.fromTo("#head-shot", {width: 0, height: 0, visibility: "hidden"}, {width: headShotWidth, height: headShotHeight, visibility: "visible"}, 3.5);
-        startTimeline.fromTo("#welcome", {opacity: 0, left: "-50%", visibility: "hidden"}, {opacity: 1, left: welcomeTextLeft, visibility: "visible"}, "-=1");
+        
 
     })();
 }
