@@ -39,7 +39,7 @@ headShot = document.getElementById("head-shot");
 headShotWidth = window.getComputedStyle(headShot).getPropertyValue("width");
 console.log(headShotWidth);
 headShotHeight = window.getComputedStyle(headShot).getPropertyValue("height");
-console.log(headShotHeight);
+
 welcomeText = document.getElementById("welcome");
 welcomeTextLeft = window.getComputedStyle(welcomeText).getPropertyValue("left");
 

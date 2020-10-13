@@ -723,10 +723,12 @@ input, textarea {
     top: 0;
 }
     #head-shot {
+        visibility: hidden;
         transform: none;
         position: absolute;
         left: 0;
         height: 94%;
+        width: auto;
         border-radius: 0%;
     }
 
@@ -778,10 +780,12 @@ input, textarea {
     top: 0;
 }
     #head-shot {
+        visibility: hidden;
         transform: none;
         position: absolute;
         left: 0;
         height: 94%;
+        width: auto;
         border-radius: 0%;
     }
 
@@ -828,10 +832,12 @@ input, textarea {
     top: 0;
 }
     #head-shot {
+        visibility: hidden;
         transform: none;
         position: absolute;
         left: 0;
         height: 94%;
+        width: auto;
         border-radius: 0%;
     }
 
