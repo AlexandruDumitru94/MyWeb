@@ -20,6 +20,8 @@ finalWords = document.getElementById("final-words");
 finalHeight = window.getComputedStyle(finalWords).getPropertyValue("bottom");
 contact = document.getElementById("contact");
 contactHeight = window.getComputedStyle(contact).getPropertyValue("height");
+icon = document.getElementsByClassName("contact-icons")[0];
+iconHeight = window.getComputedStyle(icon).getPropertyValue("fontSize");
 
 camera = document.getElementsByClassName("camera-wip")[0];
 
@@ -92,7 +94,6 @@ function ready() {
             modalPage.style.display = "none";
             galleryContainer.style.opacity = "1";
             upperCameraText.style.color =  "rgba(255, 255, 255, 1)";
-            upperCameraText.style.zIndex = "1";
             galleryContainer.style.pointerEvents = "auto";
             camera.style.opacity = "1";
             for(let i = 0; i < innerSparkles.length; i++) {
@@ -245,7 +246,7 @@ function scrollToPage(pageNumber) {
             endTimeline.fromTo("#final-words", {bottom: "50%", yPercent: 50, display: "block",  opacity: 1}, {bottom: finalHeight, yPercent: 0, duration: 1});
             endTimeline.fromTo("#contact", {display: "none", height: 0, padding: 0, opacity: 0}, {display: "block", height: contactHeight, padding: 10, opacity: 1, duration: 1}, 2);
             endTimeline.fromTo("#icons-container", {display: "none", height: 0, opacity: 0}, {display: "flex", height: "auto", opacity: 1, duration: 1}, 2);
-            endTimeline.fromTo(".contact-icons", {display: "none", fontSize: 0, opacity: 0}, {display: "inline-block", fontSize: "2em", opacity: 1, duration: 1}, 2);
+            endTimeline.fromTo(".contact-icons", {display: "none", fontSize: 0, opacity: 0}, {display: "inline-block", fontSize: "iconHeight", opacity: 1, duration: 1}, 2);
              
             function timelineEnd() {
                 contact.style.overflow = "auto";
