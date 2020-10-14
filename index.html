@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="node_modules/swiper/swiper-bundle.min.css">
     <title>Alexandru Dumitru Portfolio</title>
 </head>
-<body  onscroll="stopScroll()">
+<body onresize="galleryDimensions()"" onscroll="stopScroll()">
 
     <section class="scroll background" ></section>
 
@@ -28,16 +28,16 @@
                 <div class="camera-container">
                     <div class="swiper-container" id="camera-swiper">
                         <div class="swiper-wrapper" id="camera-wrapper">
-                            <img src="images/mtnhouse.jpg" class="swiper-slide camera-photo">
-                            <img src="images/statue.jpg" class="swiper-slide camera-photo">
-                            <img src="images/lake.jpg" class="swiper-slide camera-photo">
-                            <img src="images/cloud.jpg" class="swiper-slide camera-photo">
-                            <img src="images/car.jpg" class="swiper-slide camera-photo">
-                            <img src="images/building.jpg" class="swiper-slide camera-photo">
-                            <img src="images/bottomview.jpg" class="swiper-slide camera-photo">
-                            <img src="images/sunglasses.jpg" class="swiper-slide camera-photo">
-                            <img src="images/trees.jpg" class="swiper-slide camera-photo">
-                            <img src="images/sunset.jpg" class="swiper-slide camera-photo">
+                            <img src="images/mtnhouse.jpg" alt="Mountain View" class="swiper-slide camera-photo">
+                            <img src="images/statue.jpg" alt="Statue" class="swiper-slide camera-photo">
+                            <img src="images/lake.jpg" alt="Lake" class="swiper-slide camera-photo">
+                            <img src="images/cloud.jpg" alt="Cloud" class="swiper-slide camera-photo">
+                            <img src="images/car.jpg" alt="Car" class="swiper-slide camera-photo">
+                            <img src="images/building.jpg" alt="Tower Building" class="swiper-slide camera-photo">
+                            <img src="images/bottomview.jpg" alt="Bottom view of Building" class="swiper-slide camera-photo">
+                            <img src="images/sunglasses.jpg" alt="Sunglasses" class="swiper-slide camera-photo">
+                            <img src="images/trees.jpg" alt="Trees" class="swiper-slide camera-photo">
+                            <img src="images/sunset.jpg" alt="Sunset" class="swiper-slide camera-photo">
                         </div>
                     </div>
                 </div>
@@ -49,16 +49,16 @@
                     <span class="modal-close">&times;</span>
 
                     <div class="modal-content swiper-wrapper">
-                        <img src="images/mtnhouse.jpg" class="swiper-slide modal-photo">
-                        <img src="images/statue.jpg" class="swiper-slide modal-photo">
-                        <img src="images/lake.jpg" class="swiper-slide camera-photo">
-                        <img src="images/cloud.jpg" class="swiper-slide camera-photo">
-                        <img src="images/car.jpg" class="swiper-slide camera-photo">
-                        <img src="images/building.jpg" class="swiper-slide camera-photo">
-                        <img src="images/bottomview.jpg" class="swiper-slide camera-photo">
-                        <img src="images/sunglasses.jpg" class="swiper-slide camera-photo">
-                        <img src="images/trees.jpg" class="swiper-slide camera-photo">
-                        <img src="images/sunset.jpg" class="swiper-slide camera-photo">
+                        <img src="images/mtnhouse.jpg"  alt="Mountain View" class="swiper-slide modal-photo">
+                        <img src="images/statue.jpg"  alt="Statue" class="swiper-slide modal-photo">
+                        <img src="images/lake.jpg"  alt="Lake" class="swiper-slide camera-photo">
+                        <img src="images/cloud.jpg"  alt="Cloud" class="swiper-slide camera-photo">
+                        <img src="images/car.jpg"  alt="Car" class="swiper-slide camera-photo">
+                        <img src="images/building.jpg"  alt="Tower Building" class="swiper-slide camera-photo">
+                        <img src="images/bottomview.jpg"  alt="Bottom view of Building" class="swiper-slide camera-photo">
+                        <img src="images/sunglasses.jpg"  alt="Sunglasses" class="swiper-slide camera-photo">
+                        <img src="images/trees.jpg"  alt="Trees" class="swiper-slide camera-photo">
+                        <img src="images/sunset.jpg"  alt="Sunset" class="swiper-slide camera-photo">
                     </div>
                 </div>
             </div>
@@ -79,7 +79,7 @@
                     </ul>
                 </figcaption>
 
-                <img class="planet jupiter" src="images/planets/jupiter.png"  width="518px" height="517px" />
+                <img class="planet jupiter" src="images/planets/jupiter.png" alt="Jupiter" width="518px" height="517px" />
             </figure>
             
             <figure class="planet-container container-saturn">
@@ -96,11 +96,11 @@
                     </ul>
                 </figcaption>
 
-                <img class="planet saturn" src="images/planets/saturn.png"  width="508px" height="377px" />
+                <img class="planet saturn" src="images/planets/saturn.png" alt="Saturn" width="508px" height="377px" />
             </figure>
 
             <figure class="planet-container container-uranus">
-                <img class="planet uranus" src="images/planets/uranus.png"  width="646px" height="634px" />
+                <img class="planet uranus" src="images/planets/uranus.png" alt="Uranus" width="646px" height="634px" />
                 
                 <figcaption class="planet-info info-uranus" data-planet-array="0">
                     <h3 class="planet-title">Uranus</h3>
@@ -118,10 +118,10 @@
             </figure>
 
             <figure class="planet-container container-neptune">
-                <img class="planet neptune" src="images/planets/neptune.png"  width="588px" height="583px" />
+                <img class="planet neptune" src="images/planets/neptune.png" alt="Neptune" width="588px" height="583px" />
 
                 <figcaption class="planet-info info-neptune" data-planet-array="1">
-                    <h3 class="planet-title">Titleadsbhdashdjhsak <span class="planet-close">&times;</span></h3>
+                    <h3 class="planet-title">Neptune<span class="planet-close">&times;</span></h3>
                     
                     <span class="planet-info-close">&times;</span>
 
@@ -150,7 +150,7 @@
         <div class="page"></div>
 
         <div class="page">
-            <img class="sun" src="images/planets/sun.png"  width="1569px" height="1506px" />  
+            <img class="sun" src="images/planets/sun.png" alt="Sun" width="800px" height="768px" />  
         </div>
 
         <div class="page">
@@ -208,7 +208,7 @@
         <div class="page">
             <header class="page__section home-screen-top">
                 <h1 class="center-transform" id="greeting">
-                    <span class="greeting__text" id="gt-one">Hello!</span><br>
+                    <span class="greeting__text" id="gt-one">Hello,</span><br>
                     <span class="greeting__text" id="gt-two">I'm <span id="first-name">A</span>lex.</span><br>
                     <span class="greeting__text" id="gt-three">Front-end developer.</span>
                 </h1>
@@ -238,7 +238,7 @@
                     </ul>
                 </figcaption>
 
-                <img class="planet mercury" src="images/planets/mercury.png"  width="1745px" height="1745px" />
+                <img class="planet mercury" src="images/planets/mercury.png" alt="Mercury" width="768px" height="768px" />
             </figure>
 
             <figure class="planet-container container-venus">
@@ -255,14 +255,14 @@
                     </ul>
                 </figcaption>
 
-                <img class="planet venus" src="images/planets/venus.png"  width="429px" height="438px" />
+                <img class="planet venus" src="images/planets/venus.png" alt="Venus" width="429px" height="438px" />
             </figure>
         </div>
 
         <div class="page">
             <figure class="page__section photos-projects-main">
                 <img class="camera-wip" src="images/wip.jpg" alt="Work in Progress"
-                width="4134" height="2749">
+                width="4134px" height="2749px">
             </figure>
         </div>
 
@@ -277,18 +277,18 @@
         <div class="page" id="home-screen-front"></div>
 
         <div class="page">
-            <img class="outer-sparkle" id="sparkle-one" src="images/sparkle.png" />
-            <img class="outer-sparkle" id="sparkle-two" src="images/sparkle.png" />
-            <img class="outer-sparkle" id="sparkle-three" src="images/sparkle.png" />
-            <img class="outer-sparkle" id="sparkle-four" src="images/sparkle.png" />
-            <img class="inner-sparkle" id="sparkle-five" src="images/sparkle.png" />
-            <img class="inner-sparkle" id="sparkle-six" src="images/sparkle.png" />
+            <img class="outer-sparkle" id="sparkle-one" src="images/sparkle.png" alt="Sparkle" />
+            <img class="outer-sparkle" id="sparkle-two" src="images/sparkle.png" alt="Sparkle" />
+            <img class="outer-sparkle" id="sparkle-three" src="images/sparkle.png" alt="Sparkle" />
+            <img class="outer-sparkle" id="sparkle-four" src="images/sparkle.png" alt="Sparkle" />
+            <img class="inner-sparkle" id="sparkle-five" src="images/sparkle.png" alt="Sparkle" />
+            <img class="inner-sparkle" id="sparkle-six" src="images/sparkle.png" alt="Sparkle" />
         </div>
 
         <div class="page">
             <figure class="planet-container container-earth">
                 <figcaption class="planet-info info-earth" data-planet-array="6">
-                    <h3 class="planet-title">Venus </h3> 
+                    <h3 class="planet-title">Earth </h3> 
 
                     <span class="planet-info-close">&times;</span>
                     
@@ -300,15 +300,15 @@
                     </ul>
                 </figcaption>
 
-                <img class="planet earth" src="images/planets/earth.png"  width="620px" height="614px" />
+                <img class="planet earth" src="images/planets/earth.png" alt="Earth" width="620px" height="614px" />
                 
             </figure>
 
-            <img class="planet moon" src="images/planets/moon.png"  width="1753px" height="1749px" />
+            <img class="planet moon" src="images/planets/moon.png" alt="Moon" width="770px" height="768px" />
 
             <figure class="planet-container container-mars">
                 <figcaption class="planet-info info-mars" data-planet-array="3">
-                    <h3 class="planet-title">Venus </h3>
+                    <h3 class="planet-title">Mars </h3>
 
                     <span class="planet-info-close">&times;</span> 
                     
@@ -320,7 +320,7 @@
                     </ul>
                 </figcaption>
 
-                <img class="planet mars" src="images/planets/mars.png"  width="600px" height="615px" />
+                <img class="planet mars" src="images/planets/mars.png" alt="Mars" width="600px" height="615px" />
             </figure>
         </div>
 
