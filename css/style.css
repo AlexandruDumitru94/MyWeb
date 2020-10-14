@@ -119,7 +119,7 @@ body::-webkit-scrollbar {
         }
 
 .photos-projects-main {
-    width: calc(var(--vw, 1vw) * 100);;
+    width: calc(var(--vw, 1vw) * 100);
     height: 75%;
     bottom: 6vh;
     display: flex;
