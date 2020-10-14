@@ -39,7 +39,6 @@ innerSparkles = document.getElementsByClassName("inner-sparkle");
 
 headShot = document.getElementById("head-shot");
 headShotWidth = window.getComputedStyle(headShot).getPropertyValue("width");
-console.log(headShotWidth);
 headShotHeight = window.getComputedStyle(headShot).getPropertyValue("height");
 
 welcomeText = document.getElementById("welcome");
