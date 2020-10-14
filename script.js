@@ -246,7 +246,7 @@ function scrollToPage(pageNumber) {
             endTimeline.fromTo("#final-words", {bottom: "50%", yPercent: 50, display: "block",  opacity: 1}, {bottom: finalHeight, yPercent: 0, duration: 1});
             endTimeline.fromTo("#contact", {display: "none", height: 0, padding: 0, opacity: 0}, {display: "block", height: contactHeight, padding: 10, opacity: 1, duration: 1}, 2);
             endTimeline.fromTo("#icons-container", {display: "none", height: 0, opacity: 0}, {display: "flex", height: "auto", opacity: 1, duration: 1}, 2);
-            endTimeline.fromTo(".contact-icons", {display: "none", fontSize: 0, opacity: 0}, {display: "inline-block", fontSize: "iconHeight", opacity: 1, duration: 1}, 2);
+            endTimeline.fromTo(".contact-icons", {display: "none", fontSize: 0, opacity: 0}, {display: "inline-block", fontSize: iconHeight, opacity: 1, duration: 1}, 2);
              
             function timelineEnd() {
                 contact.style.overflow = "auto";
