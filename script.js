@@ -71,6 +71,9 @@ function galleryDimensions() {
     });
 }
 window.ondeviceorientation = galleryDimensions();
+window.ondeviceorientation = console.log("welp");
+body.onresize = galleryDimensions();
+window.onresize = console.log("welp1");
 
 if(window.readyState == 'loading') {
     window.addEventListener('DOMContentLoaded', ready)
@@ -194,6 +197,14 @@ window.onload = document.documentElement.style.setProperty('--vh', `${vh}px`);
 window.addEventListener('resize', () => {
     let vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty('--vh', `${vh}px`);
+});
+
+let vw = window.innerWidth * 0.01;
+window.onload = document.documentElement.style.setProperty('--vw', `${vw}px`);
+
+window.addEventListener('resize', () => {
+    let vw = window.innerWidth * 0.01;
+    document.documentElement.style.setProperty('--vw', `${vw}px`);
 });
 
 $(function() {
