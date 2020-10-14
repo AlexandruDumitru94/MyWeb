@@ -45,9 +45,32 @@ welcomeTextLeft = window.getComputedStyle(welcomeText).getPropertyValue("left");
 
 startTimeline = gsap.timeline({defaults: {duration: 1}});
 
-        startTimeline.fromTo(".greeting__text", {opacity: 0, top: "-=100", visibility: "hidden"}, {opacity: 1, top: 0, visibility: "visible", stagger: 1});
-        startTimeline.fromTo("#head-shot", {opacity: 0, width: 0, height: 0, visibility: "hidden"}, {opacity: 1, width: headShotWidth, height: headShotHeight, visibility: "visible"}, "+=0.5");
-        startTimeline.fromTo("#welcome", {opacity: 0, left: "-50%", visibility: "hidden"}, {opacity: 1, left: welcomeTextLeft, visibility: "visible"}, "-=1");
+    startTimeline.fromTo(".greeting__text", {opacity: 0, top: "-=100", visibility: "hidden"}, 
+    {opacity: 1, top: 0, visibility: "visible", stagger: 1});
+
+    startTimeline.fromTo("#head-shot", {opacity: 0, width: 0, height: 0, visibility: "hidden"}, 
+    {opacity: 1, width: headShotWidth, height: headShotHeight, visibility: "visible"}, "+=0.5");
+
+    startTimeline.fromTo("#welcome", {opacity: 0, left: "-50%", visibility: "hidden"}, 
+    {opacity: 1, left: welcomeTextLeft, visibility: "visible"}, "-=1");
+
+function galleryDimensions() {
+    cameraWidth = camera.clientWidth;
+    cameraHeight = camera.clientHeight;
+    cameraHeightPx = cameraHeight + "px";
+    cameraWidthPx = cameraWidth + "px";
+
+    cameraContainer.style.height = cameraHeightPx;
+    cameraContainer.style.width = cameraWidthPx;
+    
+    modal.style.height = cameraHeightPx;
+    modal.style.width = cameraWidthPx;
+    
+    gallerySwiper = new Swiper(galleryContainer, {
+        touchReleaseOnEdges: true
+    });
+}
+window.ondeviceorientation = galleryDimensions();
 
 if(window.readyState == 'loading') {
     window.addEventListener('DOMContentLoaded', ready)
@@ -85,8 +108,7 @@ function ready() {
             function addModalSwiper() {
                 modalPage.style.display = "flex";
                 galleryContainer.style.opacity = "0.3";
-                upperCameraText.style.color =  "rgba(255, 255, 255, 0.3)";
-                upperCameraText.style.zIndex = "0";
+                upperCameraText.style.color =  "rgba(255, 255, 255, 0)";
                 galleryContainer.style.pointerEvents = "none";
                 camera.style.opacity = "0.5";
 
@@ -226,20 +248,5 @@ function scrollToPage(pageNumber) {
         } 
  };
 
- function galleryDimensions() {
-        cameraWidth = camera.clientWidth;
-        cameraHeight = camera.clientHeight;
-        cameraHeightPx = cameraHeight + "px";
-        cameraWidthPx = cameraWidth + "px";
-
-        cameraContainer.style.height = cameraHeightPx;
-        cameraContainer.style.width = cameraWidthPx;
-        
-        modal.style.height = cameraHeightPx;
-        modal.style.width = cameraWidthPx;
-        
-        gallerySwiper = new Swiper(galleryContainer, {
-            touchReleaseOnEdges: true
-        });
-    }
+ 
 
