@@ -28,7 +28,7 @@ body::-webkit-scrollbar {
     .background {
         background-image: radial-gradient(circle, rgba(0,0,0,1) 15%,rgb(71, 71, 71)  ); 
         height: calc(var(--vh, 1vh) * 100);
-        width: calc(var(--vw, 1vw) * 500);
+        width: 500vw;
         
     }
 
@@ -39,22 +39,22 @@ body::-webkit-scrollbar {
         height: calc(var(--vh, 1vh) * 100);
     }
         .section--first {
-            width: calc(var(--vw, 1vw) * 500);
+            width: 500vw;
         } 
         .section--second {
-            width: calc(var(--vw, 1vw) * 600);
+            width: 600vw;
         }
         .section--third {
-            width: calc(var(--vw, 1vw) * 700);
+            width: 700vw;
         }
         .section--fourth {
-            width: calc(var(--vw, 1vw) * 800);
+            width: 800vw;
         }
 
 
 .page {
     height: 100%;
-    width: 100%;
+    width: calc(var(--vw, 1vw) * 100);
     position: relative;
 }
     .page__section {
